@@ -6,7 +6,7 @@ TARGET_BASE_DIR=$2
 LANG=$3
 URL=https://ja.wordpress.org/wordpress-${VERSION}.zip
 if [ -n "${LANG}" ]; then
-    URL=https://ja.wordpress.org/wordpress-${VERSION}-ja.zip
+    URL=https://${LANG}.wordpress.org/wordpress-${VERSION}-${LANG}.zip
 fi
 ZIP_FILE_NAME=$(basename ${URL})
 FILE_NAME=$(basename ${URL%.*})
